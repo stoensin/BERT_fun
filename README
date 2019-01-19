@@ -9,3 +9,5 @@ Program will count the position automatically.
 4. label_honglou.txt: the labeled speaker and contexted information for about 1562 examples
 
 5. augment_data.py: using data augmentation to construct 1562*1562 examples by combine replacing the original speaker with speakers in different context.
+
+6. dataset.py: use augment_data.py to create training, validation and testing dataset.
