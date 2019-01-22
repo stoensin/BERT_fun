@@ -10,4 +10,12 @@ Program will count the position automatically.
 
 5. augment_data.py: using data augmentation to construct 1562*1562 examples by combine replacing the original speaker with speakers in different context.
 
-6. dataset.py: use augment_data.py to create training, validation and testing dataset.
+6. dataset.py: use augment_data.py to create training dataset.
+
+7. prepare_squad_data.py: convert the training dataset to json format which can be understood by BERT/SQUAD
+
+8. prediction_results_utf8.py: the prediction results for all the context extracted from hong lou meng.
+
+9. compare_res.py: put the context and prediction results side-by-side for a clearer comparison
+
+10. res.txt and res_1p2million.txt: prediction results using 36000 and 1.2 million training examples correspondingly.

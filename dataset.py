@@ -30,5 +30,7 @@ def construct_dataset(kind='training', start_idx=0, end_idx=ntrain, save_to_disk
     return xtrain, ytrain
 
 xtrain, ytrain = construct_dataset(kind='training', start_idx=0, end_idx=ntrain)
-xvalid, yvalid = construct_dataset(kind='validation', start_idx=ntrain, end_idx=ntrain+nvalid)
-xtest,  ytest  = construct_dataset(kind='testing', start_idx=ntrain+nvalid, end_idx=ntrain+nvalid+ntest)
+
+#### use the unlabelled data for testing
+##xvalid, yvalid = construct_dataset(kind='validation', start_idx=ntrain, end_idx=ntrain+nvalid)
+##xtest,  ytest  = construct_dataset(kind='testing', start_idx=ntrain+nvalid, end_idx=ntrain+nvalid+ntest)
