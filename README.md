@@ -1,3 +1,19 @@
+By LongGang Pang, from UC Berkeley
+
+BERT应用之《红楼梦》对话人物提取
+
+这个目录包含用于提取对话人物语境的脚本 conversation_extraction.ipynb，
+辅助打标签的脚本 label_data_by_click_buttons.ipynb，
+提取出的语境文件：honglou.py 
+打过标签的训练数据：label_honglou.txt
+从打过标签的数据合成百万级别新数据的脚本：augment_data.py
+将训练数据转换为BERT/SQUAD可读的脚本：prepare_squad_data.py
+以及预测结果文件：
+res.txt (使用36000组数据训练后的预测结果）；
+res_1p2million.txt（使用120万组数据训练后的预测结果）。
+对比之后发现使用更多的数据训练所提升的效果有限，比较大的提升是后者在没有答案时，输出是输入的完整拷贝。
+
+
 1. conversation_extraction.ipynb is used to extract conversation and the context which contains the information of the speaker.
 
 2. honglou.py stores the extracted conversation and context information
