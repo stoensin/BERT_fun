@@ -11,8 +11,10 @@ BERT应用之《红楼梦》对话人物提取
 7. 以及预测结果文件：
 8. res.txt (使用36000组数据训练后的预测结果）；
 9. res_1p2million.txt（使用120万组数据训练后的预测结果）。
+10. res_crf.txt: 使用条件随机场预测的结果。
+11. bert_vs_crf.txt: BERT 与 条件随机场预测结果的不同。
 
-对比之后发现使用更多的数据训练所提升的效果有限，比较大的提升是后者在没有答案时，输出是输入的完整拷贝。
+对比8和9之后发现使用更多的数据训练所提升的效果有限，比较大的提升是后者在没有答案时，输出是输入的完整拷贝。
 
 摘录 res.txt 中部分内容如下，每一行是一组语境数据以及预测结果，两者用|||分隔：
 
@@ -51,7 +53,6 @@ BERT应用之《红楼梦》对话人物提取
 > 宝钗也忍不住笑着，把黛玉腮上一拧，说道：  |||  宝钗
 
 > 薛姨妈一面又说：  |||  薛姨妈
-
 
 
 1. conversation_extraction.ipynb is used to extract conversation and the context which contains the information of the speaker.
